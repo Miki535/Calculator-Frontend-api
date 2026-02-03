@@ -1,0 +1,63 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: rgb(182, 182, 182);
+    font-size: 90px;
+}
+
+input {
+    background-color: rgb(173, 173, 173);
+    border-radius: 0.5cm;
+    border-style: solid;
+    width: 450px;
+    height: 45px;
+    font-size: large;
+}
+
+.Centrilizer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: 35px;
+}
+
+button {
+  --button_radius: 0.75em;
+  --button_color: rgb(173, 173, 173);
+  --button_outline_color: #161616;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.70em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  transform: translateY(-0.35em);
+}
+
+button:active .button_top {
+  transform: translateY(0);
+}
