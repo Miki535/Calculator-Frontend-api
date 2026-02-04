@@ -8,24 +8,24 @@
 </head>
 <body>
     <h1>Calculator</h1>
-    <script src="main.js"></script>
     <div class="Centrilizer">
         <p>Result</p>
     </div>
     <div class="Centrilizer">
-        <label id="firstnumber">
-            <input type="text" required>
-        </label>
+        <form onsubmit="return checkForm(this)" method="post">
+            <label for="">First number:</label>
+            <input type="text" name="firstnumber" id="firstnumber">
+            <label for="">Second number:</label>
+            <input type="text" name="secondnumber" id="secondnumber">
+            <select id="sign">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            </select>
+            <input type="submit" name="submit" value="Calculate">
+        </form>
     </div>
-    <div class="Centrilizer">
-        <label id="secondnumber">
-            <input type="text" required>
-        </label>
-    </div>
-    <div class="Centrilizer">
-        <button type="submit">
-        <span class="button_top">Calculate</span>
-    </button>
-    </div>
+    <script src="main.js"></script>
 </body>
 </html>
