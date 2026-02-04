@@ -9,19 +9,23 @@
 <body>
     <h1>Calculator</h1>
     <div class="Centrilizer">
-        <p>Result</p>
+        <div id="myDiv">
+            <p id="output">Result ${result}</p>
+        </div>
     </div>
     <div class="Centrilizer">
         <form onsubmit="return checkForm(this)" method="post">
+            <p>Result: {data}</p>
             <label for="">First number:</label>
-            <input type="text" name="firstnumber" id="firstnumber">
+            <input type="text" name="firstnumber" id="firstnumber" required>
             <label for="">Second number:</label>
-            <input type="text" name="secondnumber" id="secondnumber">
+            <input type="text" name="secondnumber" id="secondnumber" required>
             <select id="sign">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
             <option value="/">/</option>
+            <option value=""
             </select>
             <input type="submit" name="submit" value="Calculate">
         </form>

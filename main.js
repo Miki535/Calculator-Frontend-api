@@ -26,6 +26,11 @@ function checkForm(el) {
         }
         return response.json();
     })
+    .then(data => {
+        var result = data.result;
+        document.getElementById("output").innerHTML = `${result}`;
+        console.log('Success:', data);
+    })
     .then(data => console.log('Success:', data))
     .catch(error => console.error('Error:', error));
 
