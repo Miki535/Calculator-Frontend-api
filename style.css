@@ -61,3 +61,12 @@ button:hover .button_top {
 button:active .button_top {
   transform: translateY(0);
 }
+
+p {
+  color: rgb(156, 156, 156);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: xx-large;
+  padding-top: 30px;
+}

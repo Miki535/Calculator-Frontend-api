@@ -1,9 +1,12 @@
+var firstNumber = document.getElementById('firstnumber');
+var secondNumber = document.getElementById('secondnumber');
+var sign = document.getElementById('sign');
 const apiUrl = 'http://localhost:8080/getRequest';
 
 const postData = {
-    firstnumber: 50.6,
-    secondnumber: 12.4,
-    sign: "/"
+    firstnumber: firstNumber,
+    secondnumber: secondNumber,
+    sign: sign
 };
 
 fetch(apiUrl, {
