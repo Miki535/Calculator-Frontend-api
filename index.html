@@ -3,39 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Calculator</h1>
 
-<h1>Calculator</h1>
+    <div class="Centrilizer">
+        <form onsubmit="return checkForm(this)">
+            <input type="text" id="firstnumber" placeholder="First number" required>
+            <br>
 
-<p id="output" style="display:none;"></p>
-<form onsubmit="return checkForm(this)">
-    <label>First number:</label>
-    <input type="text" id="firstnumber" required>
-
-    <div id="secondWrapper">
-        <label>Second number:</label>
-        <input type="text" id="secondnumber">
-    </div>
-
-    <select id="sign" onchange="handleSignChange()">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-        <option value="abs">abs</option>
-        <option value="sin">sin</option>
-        <option value="cos">cos</option>
-        <option value="tan">tan</option>
-        <option value="sqrt">sqrt</option>
-        <option value="log">log</option>
-        <option value="pow">pow</option>
-    </select>
-
-    <br><br>
-    <input type="submit" value="Calculate">
-</form>
-
+            <div id="secondWrapper">
+                <br>
+                <input type="text" id="secondnumber" placeholder="Second number">
+            </div>
+            <br>
+            <select id="sign" onchange="handleSignChange()">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="abs">abs</option>
+                <option value="sin">sin</option>
+                <option value="cos">cos</option>
+                <option value="tan">tan</option>
+                <option value="sqrt">sqrt</option>
+                <option value="log">log</option>
+                <option value="pow">pow</option>
+            </select>
+            <br><br><br>
+        <input type="submit" value="Calculate" class="inputSize">
+        <p id="output" style="display:none;"></p>
+    </form>
+</div>
 <script src="uiux.js"></script>
 <script src="main.js"></script>
 </body>
