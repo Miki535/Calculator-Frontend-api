@@ -2,39 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
 <body>
-    <h1>Calculator</h1>
-    <div class="Centrilizer">
-        <div id="myDiv">
-            <p id="output">Result ${result}</p>
-        </div>
+
+<h1>Calculator</h1>
+
+<p id="output" style="display:none;"></p>
+<form onsubmit="return checkForm(this)">
+    <label>First number:</label>
+    <input type="text" id="firstnumber" required>
+
+    <div id="secondWrapper">
+        <label>Second number:</label>
+        <input type="text" id="secondnumber">
     </div>
-    <div class="Centrilizer">
-        <form onsubmit="return checkForm(this)" method="post">
-            <p>Result: {data}</p>
-            <label for="">First number:</label>
-            <input type="text" name="firstnumber" id="firstnumber" required>
-            <label for="">Second number:</label>
-            <input type="text" name="secondnumber" id="secondnumber" required>
-            <select id="sign">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-            <option value="sin">sin</option>
-            <option value="cos">cos</option>
-            <option value="tan">tan</option>
-            <option value="sqrt">sqrt</option>
-            <option value="log">log</option>
-            <option value="mod">modulo</option>
-            </select>
-            <input type="submit" name="submit" value="Calculate">
-        </form>
-    </div>
-    <script src="main.js"></script>
+
+    <select id="sign" onchange="handleSignChange()">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="mod">modulo</option>
+        <option value="sin">sin</option>
+        <option value="cos">cos</option>
+        <option value="tan">tan</option>
+        <option value="sqrt">sqrt</option>
+        <option value="log">log</option>
+        <option value="pow">pow</option>
+    </select>
+
+    <br><br>
+    <input type="submit" value="Calculate">
+</form>
+
+<script src="uiux.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
